@@ -1,0 +1,6 @@
+
+/.hg
+/.svn
+/nbproject
+/.hgignore
+/build.sh

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter version="5.0" xml:id="manual" xml:lang="zh_CN"
+         xmlns="http://docbook.org/ns/docbook"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:svg="http://www.w3.org/2000/svg"
+         xmlns:m="http://www.w3.org/1998/Math/MathML"
+         xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns:db="http://docbook.org/ns/docbook">
+  <title>使用说明</title>
+
+  <indexterm>
+    <primary>manual</primary>
+  </indexterm>
+
+  <section xml:id="config">
+    <title>函数说明</title>
+
+    <section>
+      <title>zoeey_encode</title>
+
+      <para>加密。</para>
+
+      <simplesect>
+        <title>描述</title>
+
+        <methodsynopsis>
+          <type>string</type>
+
+          <methodname>zoeey_encode</methodname>
+
+          <methodparam>
+            <type>string</type>
+
+            <parameter>$code</parameter>
+
+            <initializer>NULL</initializer>
+          </methodparam>
+        </methodsynopsis>
+
+        <para>对代码进行加密。</para>
+      </simplesect>
+
+      <simplesect>
+        <title>参数</title>
+
+        <variablelist>
+          <varlistentry>
+            <term>code</term>
+
+            <listitem>
+              <para>源代码。</para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+      </simplesect>
+
+      <simplesect>
+        <title>返回值</title>
+
+        <para>返回密文内容。</para>
+      </simplesect>
+    </section>
+
+    <section xml:id="loader.fromGet">
+      <title>zoeey_run</title>
+
+      <para>运行。</para>
+
+      <simplesect>
+        <title>描述</title>
+
+        <methodsynopsis>
+          <type>bool</type>
+
+          <methodname>zoeey_run</methodname>
+
+          <methodparam>
+            <type>string</type>
+
+            <parameter>$code</parameter>
+
+            <initializer>NULL</initializer>
+          </methodparam>
+        </methodsynopsis>
+
+        <para>运行密文。</para>
+      </simplesect>
+
+      <simplesect>
+        <title>参数</title>
+
+        <variablelist>
+          <varlistentry>
+            <term>code</term>
+
+            <listitem>
+              <para>密文。</para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+      </simplesect>
+
+      <simplesect>
+        <title>返回值</title>
+
+        <para>执行是否成功。</para>
+      </simplesect>
+    </section>
+  </section>
+
+  <section>
+    <title>常规定制</title>
+
+    <para>大部分的定制功能可以在PHP源码内完成，如限制使用者域名，强制输出。</para>
+
+    <section>
+      <title>加密定制</title>
+
+      <task>
+        <title>ZoeeyGuard 基础版本提供三步数据加密</title>
+
+        <procedure>
+          <step>
+            <para>数据位置交换 （OBFUSCATED_ORDER）。</para>
+          </step>
+
+          <step>
+            <para>使用密匙求异或 （PRIVATE_KEY）。</para>
+          </step>
+
+          <step>
+            <para>这一步可供自定义加密。下面介绍几个常用的加密方式。</para>
+
+            <simplelist>
+              <member>RC4: http://en.wikipedia.org/wiki/RC4</member>
+
+              <member>XXTEA: http://en.wikipedia.org/wiki/XXTEA</member>
+
+              <member>DES:
+              http://en.wikipedia.org/wiki/Data_Encryption_Standard</member>
+            </simplelist>
+          </step>
+
+          <step>
+            <para>乱序base64打包 （OBFUSCATED_ALPHABET）。</para>
+          </step>
+        </procedure>
+      </task>
+
+      <example>
+        <title>定制私有密匙</title>
+
+        <programlisting>/* guard.h 内定制私有密匙 */
+
+#define PRIVATE_KEY "28dsa7dsas12312389uy7aydh8h1h2i312" 
+
+/* 修改字符串即可 */
+</programlisting>
+      </example>
+
+      <example>
+        <title>定制位置交换规律</title>
+
+        <programlisting>/* guard.h 内定制位置交换规律 */
+
+static const unsigned char OBFUSCATED_ORDER[] = {
+      13,  6,  5,  7,  1, 15, 14, 20
+    ,  9, 16, 19,  4, 18, 10,  2,  8
+    , 12,  3, 11,  0, 17
+};
+/* 这里提供0～20，21个数字的乱序集合。可新增和打乱该数组以改变位置交换规律 */
+</programlisting>
+      </example>
+
+      <example>
+        <title>定制乱序base64字母表</title>
+
+        <programlisting>/* guard.h 内定制base64字母表 */
+
+static const unsigned char OBFUSCATED_ALPHABET[] = {
+      's', '4', 'N', 'E', 'k', 'X', 'c', 'u'
+    , 'J', '2', 'U', 'o', 'O', 'w', 'K', 'v'
+    , 'h', 'H', 'C', '/', 'D', 'q', 'l', 'R'
+    , 'B', 'r', '5', 'Z', 'S', 'Q', '6', 'W'
+    , '3', 'L', 'j', '8', '1', 'z', '0', 'G'
+    , 'n', 'e', 'y', 'b', 'I', 'd', 'i', 'P'
+    , 'A', '9', '7', '+', 'm', 'V', 'M', 'Y'
+    , 'F', 'g', 'f', 'p', 'a', 'T', 't', 'x'
+};
+
+/* 打乱该数组以改变base64实现 */
+</programlisting>
+      </example>
+    </section>
+
+    <section>
+      <title>设置使用期限</title>
+
+      <example>
+        <title>使用时间定制</title>
+
+        <programlisting>/* zoeeyguard.c 中通过当前UNIX时间戳判断代码是否过期 */
+
+#include &lt;time.h&gt;
+
+/* 放在 zoeey_run 内，处理参数前。 */
+long now = (long)time(NULL);
+
+if (now &gt; 123456789){
+  php_printf("expired");
+  return;
+}
+
+</programlisting>
+      </example>
+    </section>
+
+    <section>
+      <title>其他定制</title>
+
+      <para>机器码也可作为加密密匙的一部分。常规机器码，如CPU编号、硬盘序列、U盘序列、加密狗序列……</para>
+    </section>
+  </section>
+</chapter>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book version="5.0" xml:lang="zh_CN" xmlns="http://docbook.org/ns/docbook"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:svg="http://www.w3.org/2000/svg"
+      xmlns:m="http://www.w3.org/1998/Math/MathML"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:db="http://docbook.org/ns/docbook">
+  <info>
+    <title>ZoeeyGuard 用户手册</title>
+
+    <author>
+      <personname>moxie(system128@gmail.com)</personname>
+    </author>
+
+    <pubdate>2012-03-30</pubdate>
+
+    <productname/>
+
+    <legalnotice>
+      <para/>
+    </legalnotice>
+  </info>
+
+  <preface xml:id="task.list">
+    <title>项目介绍</title>
+
+    <para>ZoeeyGuard 是一个PHP源码加密保护扩展。由商业收费代码简化而来。结构简单清晰，具有很强的可定制性。</para>
+  </preface>
+
+  <chapter>
+    <title>使用须知</title>
+
+    <simplesect>
+      <title>目录说明</title>
+
+      <informaltable>
+        <tgroup cols="2">
+          <thead>
+            <row>
+              <entry align="center">目录</entry>
+
+              <entry align="center">说明</entry>
+            </row>
+          </thead>
+
+          <tbody>
+            <row>
+              <entry>/src</entry>
+
+              <entry>zoeeyguard扩展源码（c）</entry>
+            </row>
+
+            <row>
+              <entry>/example</entry>
+
+              <entry>加密脚本源码（php）</entry>
+            </row>
+
+            <row>
+              <entry>/doc</entry>
+
+              <entry>文档源码</entry>
+            </row>
+
+            <row>
+              <entry>/doc/build</entry>
+
+              <entry>已编译的文档</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </simplesect>
+
+    <simplesect>
+      <title>使用流程</title>
+
+      <task>
+        <title/>
+
+        <procedure>
+          <step>
+            <para>编译安装zoeeyguard扩展（/src）。</para>
+          </step>
+
+          <step>
+            <para>使用加密函数对源码进行加密。可直接使用 /example 目录下的加密脚本。</para>
+          </step>
+
+          <step>
+            <para>部署加密后的脚本，运行。</para>
+          </step>
+        </procedure>
+      </task>
+    </simplesect>
+  </chapter>
+
+  <xi:include href="quickstart.xml" xpointer="element(/1)"/>
+
+  <xi:include href="manual.xml" xpointer="element(/1)"/>
+
+  <xi:include href="faq.xml" xpointer="element(/1)"/>
+</book>

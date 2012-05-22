@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter version="5.0" xmlns="http://docbook.org/ns/docbook"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:svg="http://www.w3.org/2000/svg"
+         xmlns:m="http://www.w3.org/1998/Math/MathML"
+         xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns:db="http://docbook.org/ns/docbook">
+  <title>常见问题</title>
+
+  <simplesect>
+    <title>为什么源码写的这么烂？</title>
+
+    <para>这是从商业代码精简整理来的，起初写的时候鄙人技术甚差（现在更差-_-#）。多有不足，请君斧正。</para>
+  </simplesect>
+
+  <simplesect>
+    <title>应该在什么情况下使用它，不是倡导开源呢么？</title>
+
+    <para>首先鉴于windows下编译PHP扩展非常麻烦，建议您在unix*下使用。</para>
+
+    <para>用来隐蔽敏感代码，如支付接口的配置文件，域名注册接口的配置文件。</para>
+
+    <para>当然，如果您是商业代码，也可以用来保护产品源码。</para>
+
+    <para>倡导开源和对源码进行加密并不冲突。</para>
+
+    <para>对敏感代码进行加密可以在一定程度上保障程序的运行安全，保护开发者和使用者的基本利益。</para>
+  </simplesect>
+
+  <simplesect>
+    <title>加密效果如何，是否很容易被破解？</title>
+
+    <para>在源码和扩展库没有泄露的情况下很难破解。可大幅增加破解难度,但并不保证完全无法破解。</para>
+  </simplesect>
+
+  <simplesect>
+    <title>这个开源版本和以前的商业版本有什么不同？</title>
+
+    <para>商业版本加密和解密是分离的，加密使用独立的客户端程序。解密使用独立扩展，在扩展内不存在加密方法。</para>
+
+    <para>商业版本和本开源免费版本安全性上并无太大区别。</para>
+
+    <para>开源版本定制性强，可以根据自己的需要进行扩展。生成脚本使用PHP实现，操作灵活度大大增强。</para>
+
+    <para>开源版本更为强大，但是用复杂度也有所增加。</para>
+  </simplesect>
+
+  <simplesect>
+    <title>为什么开源了？</title>
+
+    <para>客户要求提供多平台编译版本，操作成本高昂。定制要求多变，调试成本过高。</para>
+  </simplesect>
+</chapter>

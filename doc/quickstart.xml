@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter version="5.0" xml:id="quickstart" xml:lang="zh-CN"
+         xmlns="http://docbook.org/ns/docbook"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:svg="http://www.w3.org/2000/svg"
+         xmlns:m="http://www.w3.org/1998/Math/MathML"
+         xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns:db="http://docbook.org/ns/docbook">
+  <title>快速入门</title>
+
+  <indexterm>
+    <primary>quickstart</primary>
+  </indexterm>
+
+  <simplesect>
+    <title>扩展安装</title>
+
+    <programlisting>root# cd /path/to/php/src/ext/zoeeyguard
+root# /path/to/php/bin/phpize
+root# ./configure --with-php-config=root#/path/to/php/bin/php-config
+root# make install
+root# make
+root# cp modules/zoeeyguard.so /path/to/php/lib #(extension_dir)
+root# echo 'extension=zoeeyguard.so' &gt;&gt; /path/to/php.ini
+root# service httpd restart
+</programlisting>
+
+    <figure>
+      <title>phpinfo()</title>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/screen/phpinfo-zoeeyguard-module.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+  </simplesect>
+
+  <simplesect>
+    <title>加密与运行</title>
+
+    <para>这里使用示例加密脚本。</para>
+
+    <example>
+      <title>example.php 加密前</title>
+
+      <programlisting>&lt;?php
+
+/**
+ * 这是一个示例 
+ */
+echo '&lt;pre&gt;';
+echo date('Y-m-d H:i:s'), PHP_EOL;
+$names = get_extension_funcs('zoeeyguard');
+foreach ($names as $name) {
+    echo $name, PHP_EOL;
+}
+echo '&lt;/pre&gt;';
+?&gt;</programlisting>
+    </example>
+
+    <example>
+      <title>加密脚本主要片段</title>
+
+      <programlisting>&lt;?php
+$code = file_get_contents('example.php');
+$code = zoeey_encode($code);
+$code = sprintf('&lt;?php
+zoeey_run(\'%s\');
+?&gt;', $code);
+?&gt;</programlisting>
+    </example>
+
+    <example>
+      <title>example.php 加密后</title>
+
+      <programlisting>&lt;?php
+/* 2012-03-14 21:09:57 */
+zoeey_run('2Xr6Jcrm5GT9Kla86c30w7IjUuQb/NAIBChIrEJ+v+IMCmz3UsenWjHMWm2bsN4j
+JNDwrCTb21dcckseE8dnO31PrcHdE0snEcFaS/w1583Pvlr0S/QiOMTA2AhTouJiZ0LaO/TpUY
+suSE2YB/n3Q0VY2CVpUYOtvMeyr7eP/CQ1JEeHUHhFkmhfRss86ErzwNhcwukiJc38S0L7wRqG
+SNz427wTWDmi');
+?&gt;</programlisting>
+    </example>
+
+    <warning>
+      <para>实际加密代码中并无换行，这里换行仅为适应格式。</para>
+    </warning>
+  </simplesect>
+</chapter>

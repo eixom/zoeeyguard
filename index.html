@@ -1,0 +1,178 @@
+<!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen"/>
+  <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/script.js"></script>
+
+  <title>ZoeeyGuard</title>
+  <meta name="description" content="php source protect">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header>
+      <h1 class="title">ZoeeyGuard</h1>
+    </header>
+    <div id="container">
+      <p class="tagline">php source protect</p>
+      <div id="main" role="main">
+        <div class="download-bar">
+        <div class="inner">
+          <a href="https://github.com/zoeey/zoeeyguard/tarball/master" class="download-button tar"><span>Download</span></a>
+          <a href="https://github.com/zoeey/zoeeyguard/zipball/master" class="download-button zip"><span>Download</span></a>
+          <a href="https://github.com/zoeey/zoeeyguard" class="code">View ZoeeyGuard on GitHub</a>
+        </div>
+        <span class="blc"></span><span class="trc"></span>
+        </div>
+        <article class="markdown-body">
+          <p>易于定制的PHP源码加密扩展</p>
+
+<h1>特性</h1>
+
+<ul>
+<li>通过简单配置即可实现自定义加密。</li>
+<li>加密过程清晰，易于定制。</li>
+<li>密文与扩展独立配套，安全性高。</li>
+<li>内置加密函数，方便写入部署脚本。</li>
+</ul><h1>下载</h1>
+
+<p>源码：
+<a href="https://github.com/downloads/zoeey/zoeeyguard/zoeeyguard-latest.zip">zoeeyguard-latest.zip</a></p>
+
+<p>32位win平台扩展（dll）
+<a href="https://github.com/downloads/zoeey/zoeeyguard/zoeeyguard-1.0-x86-win.zip">zoeeyguard-1.0-x86-win.zip</a></p>
+
+<p>版本库：</p>
+
+<pre><code>git://github.com/zoeey/zoeeyguard.git
+</code></pre>
+
+<h1>手册下载</h1>
+
+<table>
+<tr>
+<td>格式 </td>
+        <td>地址 </td>
+        <td>checksum</td>
+        <td>备注 </td>
+    </tr>
+<tr>
+<td>chm</td>
+        <td>
+            <a href="https://github.com/zoeey/zoeeyguard/raw/master/doc/build/zoeeyguard.chm" rel="nofollow">chm</a>
+        </td>
+        <td>
+            <a href="https://github.com/zoeey/zoeeyguard/raw/master/doc/build/zoeeyguard.chm.checksum" rel="nofollow">checksum</a>
+        </td>
+        <td>无法查看：文件属性，解除锁定 </td>
+    </tr>
+<tr>
+<td> html </td>
+        <td>
+            <a href="https://github.com/zoeey/zoeeyguard/raw/master/doc/build/zoeeyguard.zip" rel="nofollow">zip</a>
+        </td>
+        <td>
+            <a href="https://github.com/zoeey/zoeeyguard/raw/master/doc/build/zoeeyguard.zip.checksum" rel="nofollow">checksum</a>
+        </td>
+        <td>
+        </td>
+    </tr>
+<tr>
+<td> single  </td>
+        <td>
+            <a href="https://github.com/zoeey/zoeeyguard/raw/master/doc/build/zoeeyguard-single.zip" rel="nofollow"> zip</a>
+        </td>
+        <td>
+            <a href="https://github.com/zoeey/zoeeyguard/raw/master/doc/build/zoeeyguard-single.zip.checksum" rel="nofollow">checksum</a>
+        </td>
+        <td>
+        </td>
+    </tr>
+<tr>
+<td>pdf  </td>
+        <td>
+            <a href="https://github.com/zoeey/zoeeyguard/raw/master/doc/build/zoeeyguard.pdf" rel="nofollow"> pdf</a>
+        </td>
+        <td>
+            <a href="https://github.com/zoeey/zoeeyguard/raw/master/doc/build/zoeeyguard.pdf.checksum" rel="nofollow">checksum</a>
+        </td>
+        <td>
+        </td>
+    </tr>
+</table><p>= 使用示例 =</p>
+
+<p>源文件
+index.php</p>
+
+<div class="highlight">
+<pre><span class="cp">&lt;?php</span>
+    <span class="k">echo</span> <span class="s1">'hello world'</span><span class="p">;</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</pre>
+</div>
+
+
+<p>结果
+index.php</p>
+
+<div class="highlight">
+<pre><span class="cp">&lt;?php</span>
+  <span class="cm">/* 2012-03-15 00:47:01 */</span>
+  <span class="nx">zoeey_run</span><span class="p">(</span><span class="s1">'2Xr6JcrLv8w92M38Ul30w7IjUuQjhRO+S0rdw+ag'</span><span class="p">);</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</pre>
+</div>
+
+
+<h2>联系作者</h2>
+
+<p>qq:59.43.59.0(接受定制服务)</p>
+
+<p>email:system128 at gmail dot com</p>
+
+<p>keywords: 
+<a href="https://github.com/zoeey/zoeeyguard">PHP加密</a>
+<a href="https://github.com/zoeey/zoeeyguard">PHP源码加密</a>
+<a href="https://github.com/zoeey/zoeeyguard">PHP代码保护</a></p>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="owner">
+      <p><a href="https://github.com/zoeey" class="avatar"><img src="https://secure.gravatar.com/avatar/0639e6fb22bb67646f2ba065aa84efb7?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png" width="48" height="48"/></a> <a href="https://github.com/zoeey">zoeey</a> maintains <a href="https://github.com/zoeey/zoeeyguard">ZoeeyGuard</a></p>
+      </div>
+      <div class="creds">
+        <small>This page generated using <a href="https://pages.github.com/">GitHub Pages</a><br/>theme by <a href="http://twitter.com/jonrohan/">Jon Rohan</a></small>
+      </div>
+    </footer>
+  </div>
+  <div class="current-section">
+    <a href="#top">Scroll to top</a>
+    <a href="https://github.com/zoeey/zoeeyguard/tarball/master" class="tar">tar</a><a href="https://github.com/zoeey/zoeeyguard/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
+    <p class="name"></p>
+  </div>
+
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-648170-5");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+</body>
+</html>

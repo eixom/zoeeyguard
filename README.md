@@ -101,6 +101,9 @@ qq:59.43.59.0(接受定制服务)
 email:system128 at gmail dot com
 
 
+## 以往版本
+[http://code.google.com/p/zoeeyguard/](http://code.google.com/p/zoeeyguard/)
+
 keywords: 
 [PHP加密](https://github.com/zoeey/zoeeyguard)
 [PHP源码加密](https://github.com/zoeey/zoeeyguard)

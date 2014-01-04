@@ -1,33 +1,33 @@
-Ò×ÓÚ¶¨ÖÆµÄPHPÔ´Âë¼ÓÃÜÀ©Õ¹
+æ˜“äºå®šåˆ¶çš„PHPæºç åŠ å¯†æ‰©å±•
 
-# ÌØĞÔ
- * Í¨¹ı¼òµ¥ÅäÖÃ¼´¿ÉÊµÏÖ×Ô¶¨Òå¼ÓÃÜ¡£
- * ¼ÓÃÜ¹ı³ÌÇåÎú£¬Ò×ÓÚ¶¨ÖÆ¡£
- * ÃÜÎÄÓëÀ©Õ¹¶ÀÁ¢ÅäÌ×£¬°²È«ĞÔ¸ß¡£
- * ÄÚÖÃ¼ÓÃÜº¯Êı£¬·½±ãĞ´Èë²¿Êğ½Å±¾¡£
+# ç‰¹æ€§
+ * é€šè¿‡ç®€å•é…ç½®å³å¯å®ç°è‡ªå®šä¹‰åŠ å¯†ã€‚
+ * åŠ å¯†è¿‡ç¨‹æ¸…æ™°ï¼Œæ˜“äºå®šåˆ¶ã€‚
+ * å¯†æ–‡ä¸æ‰©å±•ç‹¬ç«‹é…å¥—ï¼Œå®‰å…¨æ€§é«˜ã€‚
+ * å†…ç½®åŠ å¯†å‡½æ•°ï¼Œæ–¹ä¾¿å†™å…¥éƒ¨ç½²è„šæœ¬ã€‚
 
-# ÏÂÔØ
+# ä¸‹è½½
 
-Ô´Âë£º
+æºç ï¼š
 [zoeeyguard-latest.zip](https://github.com/downloads/zoeey/zoeeyguard/zoeeyguard-latest.zip)
 
-32Î»winÆ½Ì¨À©Õ¹£¨dll£©
+32ä½winå¹³å°æ‰©å±•ï¼ˆdllï¼‰
 [zoeeyguard-1.0-x86-win.zip](https://github.com/downloads/zoeey/zoeeyguard/zoeeyguard-1.0-x86-win.zip)
 
-°æ±¾¿â£º
+ç‰ˆæœ¬åº“ï¼š
 ```
 git://github.com/zoeey/zoeeyguard.git
 ```
 
 
-# ÊÖ²áÏÂÔØ
+# æ‰‹å†Œä¸‹è½½
 
 <table>
     <tr>
-        <td>¸ñÊ½ </td>
-        <td>µØÖ· </td>
+        <td>æ ¼å¼ </td>
+        <td>åœ°å€ </td>
         <td>checksum</td>
-        <td>±¸×¢ </td>
+        <td>å¤‡æ³¨ </td>
     </tr>
     <tr>
         <td>chm</td>
@@ -37,7 +37,7 @@ git://github.com/zoeey/zoeeyguard.git
         <td>
             <a href="https://github.com/zoeey/zoeeyguard/raw/master/doc/build/zoeeyguard.chm.checksum" rel="nofollow">checksum</a>
         </td>
-        <td>ÎŞ·¨²é¿´£ºÎÄ¼şÊôĞÔ£¬½â³ıËø¶¨ </td>
+        <td>æ— æ³•æŸ¥çœ‹ï¼šæ–‡ä»¶å±æ€§ï¼Œè§£é™¤é”å®š </td>
     </tr>
     <tr>
         <td> html </td>
@@ -76,9 +76,9 @@ git://github.com/zoeey/zoeeyguard.git
 
 
 
-= Ê¹ÓÃÊ¾Àı =
+= ä½¿ç”¨ç¤ºä¾‹ =
 
-Ô´ÎÄ¼ş
+æºæ–‡ä»¶
 index.php
 ```php
 <?php
@@ -86,7 +86,7 @@ index.php
 ?>
 ```
 
-½á¹û
+ç»“æœ
 index.php
 ```php
 <?php
@@ -95,19 +95,19 @@ index.php
 ?>
 ```
 
-## ÁªÏµ×÷Õß
-qq:59.43.59.0(½ÓÊÜ¶¨ÖÆ·şÎñ)
+## è”ç³»ä½œè€…
+qq:59.43.59.0(æ¥å—å®šåˆ¶æœåŠ¡ï¼šä»…æºç å®šåˆ¶ä¸ç¼–è¯‘å‘çˆ¹çš„win dll)
 
 email:system128 at gmail dot com
 
 
-## ÒÔÍù°æ±¾
+## ä»¥å¾€ç‰ˆæœ¬
 [http://code.google.com/p/zoeeyguard/](http://code.google.com/p/zoeeyguard/)
 
 keywords: 
-[PHP¼ÓÃÜ](https://github.com/zoeey/zoeeyguard)
-[PHPÔ´Âë¼ÓÃÜ](https://github.com/zoeey/zoeeyguard)
-[PHP´úÂë±£»¤](https://github.com/zoeey/zoeeyguard)
+[PHPåŠ å¯†](https://github.com/zoeey/zoeeyguard)
+[PHPæºç åŠ å¯†](https://github.com/zoeey/zoeeyguard)
+[PHPä»£ç ä¿æŠ¤](https://github.com/zoeey/zoeeyguard)
 
 
  
